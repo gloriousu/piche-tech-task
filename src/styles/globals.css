@@ -2,20 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply base-scrollbar bg-neutral-200 h-full min-h-full m-0;
+}
+
+.base-scrollbar::-webkit-scrollbar {
+  @apply w-1.5 h-1.5;
+}
+
+.base-scrollbar::-webkit-scrollbar-track {
+  @apply w-1.5 h-1.5;
+}
+
+.base-scrollbar::-webkit-scrollbar-thumb {
+  @apply w-1 h-1 rounded bg-neutral-400;
+}
+
+.modal-color {
+  background: rgba(0, 0, 0, 0.5);
 }
