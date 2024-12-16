@@ -151,7 +151,7 @@ export default function Home() {
                 ? { name: '', quantity: 0, category: null, isPurchased: false }
                 : Grocery.findItem(selectedGroceryItemId)
             }
-            categories={categories}
+            categories={['Fruits', 'Dairy', 'Vegetables']}
             onSubmit={modalMode === 'Add' ? onAddGroceryItemSubmit : onEditGroceryItemSubmit}
           />
         </Portal>
